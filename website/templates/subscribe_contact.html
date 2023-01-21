@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% block title %}{{title}}{% endblock %} {% block content %}
+
+
+<!-- Subscribe Form -->
+
+
+<div id="subscribeBlock" class="container container-sm shadow p-3 mb-5 bg-body rounded">
+    <h1>Subscribe Here</h1>
+    <p id="subscribeMessage">If you would like to receive notifications when I post on the blog, add a picture or add
+        sermons, please fill out the form below and you will begin to receive emails when we update.</p> <!-- look into getting check boxes for specific interests people want notified for -->
+
+
+    <form action="/subscriber-thank-you" method="POST">
+        {{ subscribe.hidden_tag() }}
+
+        {{ subscribe.first_name(class="form-control", placeholder="First Name") }}
+        <br><br>
+
+        {{ subscribe.last_name(class="form-control", placeholder="Last Name") }}
+        <br><br>
+        
+        {{ subscribe.email(class="form-control", placeholder="sample@email.com") }}
+        <br><br>
+        {{ subscribe.submit(class="btn btn-secondary") }} &nbsp;&nbsp;&nbsp; <input class="btn btn-secondary" type='reset'>
+        
+    </form>
+</div>
+
+    <br>
+
+
+
+    
+<!-- Contact Form -->
+
+<div id="contactBlock" class="container container-sm shadow p-3 mb-5 bg-body rounded">
+    <h1 id="contactMe"> Contact Me </h1>
+    <p id="contact">If you wish to contact me, whether with questions about the Bible, spiritual things, or about
+        potentially building a website for you, please email me: dustinsblog22@gmail.com </p>
+
+    <p>Or you may contact me with the form below:</p>
+
+
+    <form id="contactForm" action="/thank-you" method="POST">
+        {{ contact.hidden_tag() }}
+
+        {{ contact.subject() }}
+
+        <br><br>
+     
+        {{ contact.first_name(class="form-control", placeholder="First Name") }}
+        <br><br>
+       
+        {{ contact.last_name(class="form-control", placeholder="Last Name") }}
+        <br><br>
+        
+        {{ contact.email(class="form-control", placeholder="sample@email.com") }}
+        <br><br>
+
+        {{ contact.text(class="form-control", cols="60", rows="10", placeholder="Write your message here.") }}
+        <br><br>
+        {{ contact.submit(class="btn btn-secondary") }} &nbsp;&nbsp;&nbsp; <input class="btn btn-secondary" type='reset'>
+        
+    </form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,310 @@
+html {
+    background: #D5E5F2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+    font-family: 'Arial', 'Times New Roman', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    background: #D5E5F2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+    font-family: 'Arial', 'Times New Roman', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    width: 80%;
+    margin-left: 0% auto;
+}
+
+header {
+    background-color: #686868;
+    margin: 0 auto;
+}
+
+header::after {
+    /*this is a clear fix with .name floating left and nav floating right*/
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.name {
+    float: left;
+    font-weight: bold;
+    font-size: 60px;
+    padding: 10px 0;
+}
+
+nav {
+    float: right;
+    padding-top: 6%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    /*overflow: hidden;*/
+    color: rgb(0, 0, 0)/*find how to change hyperlink color?*/
+}
+
+nav li {
+    float: left;
+    margin-left: 70px;
+    display: block;
+    padding-top: 19px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 10px;
+    position: relative;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+nav a:hover {
+    color: rgba(255, 255, 255, 0.831)
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+#headerName{
+    border: 1px solid;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#logo{
+    text-align: center;
+    margin-top: -1.5%;
+    margin-right: -6%;
+    margin-bottom: -5%;
+    color: #66011a;
+}
+
+/* General Web Layout (not nav bar) */
+
+hr {
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#view{
+    color: rgb(255, 255, 255)
+}
+
+#view:hover{
+    color: rgb(255, 255, 255)
+}
+
+h1 {
+    padding-top: 25px;
+    padding-left: 40px;
+}
+
+#blogFooter {
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 25px;
+}
+
+#logoFooter{
+    padding-bottom: 25px;
+    color: #800020;
+}
+
+#contactLink{
+    color: #6400FF;
+}
+
+ul{
+    list-style-type: none;
+}
+
+#pageHeader{
+    font-size: 60px;
+    margin-bottom: 5%;
+}
+
+
+/* About me */
+
+
+
+
+#profilePicture {
+    margin-right: 10%;
+    margin-left: 8%;
+    margin-bottom: 2%;
+    padding: auto;
+    height: auto;
+    width: auto;
+
+}
+
+#profPic {
+    height: auto;
+    width: auto;
+    padding: auto;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20%;
+}
+
+#aboutMeWelcome {
+    border-style: groove;
+    position: relative;
+   
+}
+
+#aboutMe {
+    border-style: groove;
+
+
+}
+
+
+/* Blog */
+
+#blog {
+    border-style: groove;
+    height: auto;
+    width: auto;
+}
+
+#blogTitle{
+    font-size: 45px;
+    font-weight: 50px;
+
+}
+
+/* Images */
+
+.picContainer {
+    margin-left: 2.15%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: flex-start;
+}
+
+#images{
+    margin-top: 2%;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 20px;
+    padding-left: 100px;
+}
+
+figure.figure {
+    height: 93%;
+    width: 100%;
+}
+
+#image{
+    height: 100%; /* I want this to be 100% of the #images container */
+    width: 100%;
+
+   
+}
+
+#individualImages{
+    width: auto;
+    height: auto;
+}
+
+#individualImage{
+    width: 100%;
+    height: 100%;
+}
+
+#caption{
+    text-align: center;
+    font-size: 35px;
+}
+
+#imageGallery{
+    margin-right: 10px;
+    float: right;
+}
+
+/* Sermons */
+
+#singleSermon{
+    width: auto;
+    height: auto;
+}
+
+#sermons{
+    color: #6400FF
+}
+
+/*  subscribe/contact */
+
+#subscribeBlock {
+    border-style: groove;
+    height: auto;
+    width: auto;
+}
+
+#contactBlock {
+    border-style: groove;
+    height: auto;
+    width: auto;
+}
+
+
+
+/* thank you */
+
+#thankYou {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+/* unsubscribe */
+
+#unsubscribe {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}

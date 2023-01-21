@@ -1,0 +1,74 @@
+{% extends 'dash_base.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
+
+<h1 id="aboutHeader">About Me:</h1>
+
+<div id="aboutSection">
+    <div class="row">
+        <div class="col-6">
+
+
+    {% for aboutme in aboutme %}
+
+    <div id="aboutMeWelcome" class="shadow p-3 mb-5 bg-body rounded">
+        <h2 class="shadow p-3 mb-5 bg-body rounded" id="welcome">Welcome:</h2>
+            <p>{{ aboutme.welcome }}</p>
+    </div> <br><br><br><br><br>
+
+            {% endfor %}
+        </div>
+
+               <div class="col-6">
+    {% for pic in profilepic %}
+
+<div id="profilePicture" class="shadow p-3 mb-5 bg-body rounded">
+    <img src="{{ url_for('static', filename='images/profile_pic/' + pic.profile_pic )}}" class="img-fluid rounded"
+         id="profPic">
+
+    <button type="button" class="btn btn-secondary" onClick="deleteProfPic({{ pic.id }})">
+    <span aria-hidden="true">Delete</span>
+    </button>
+
+</div>
+    {% endfor %}
+                   <br>
+        </div>
+
+
+        <div class="col-11">
+
+         {% for aboutme in aboutme %}
+    <div id="aboutMe" class="shadow p-3 mb-5 bg-body rounded">
+        <h2 class="shadow p-3 mb-5 bg-body rounded" id="aboutMeHeader">About Me: </h2>
+            {{ aboutme.about|safe }}
+    </div>
+
+
+<div id="aboutButtons" class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+<button type="button" value="{{ aboutme.welcome }}{{ aboutme.about }}{{ aboutme.profile_pic }}" class="btn
+    btn-secondary btn-outline-dark"><a href="{{ url_for('auth.dash_about_editor', id=aboutme.id) }}" id="edit">
+            <span aria-hidden="true">Edit</span> </a>
+</button>
+<button type="button" class="btn btn-secondary btn-outline-dark" onClick="deleteAbout({{ aboutme.id }})">
+    <span aria-hidden="true">Delete</span>
+</button>
+</div>
+    <br>
+    <br>
+    <br>
+</div>
+
+{% endfor %}
+        </div>
+ </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

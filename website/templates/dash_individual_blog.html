@@ -1,0 +1,21 @@
+{% extends 'dash_base.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
+
+<h1>Blog:</h1>
+
+<h3>
+<div id="blog" class="shadow p-3 mb-5 bg-body rounded">
+        <h2>{{ blog.title }}</h2> <br>
+        {{ blog.content|safe }}
+            <button type="button" value="{{ blog.blog }}" class="btn btn-secondary"><a href=
+                    "{{ url_for('auth.dash_edit_blog', id=blog.id) }}" id="blogEdit"> <span aria-hidden="true">Edit</span> </a>
+            </button>
+            <button type="button" class="btn btn-secondary" onClick="deleteBlog({{ blog.id }})"> <span aria-hidden="true">Delete
+            </span></button>
+</div>
+</h3>
+
+
+
+
+
+{% endblock %}

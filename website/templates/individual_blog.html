@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
+
+<div id="blog" class="shadow p-3 mb-5 bg-body rounded">
+
+        <h2 id="blogTitle">{{ blog.title }}</h2> <br>
+        <h3>{{ blog.content|safe }}</h3>
+        <button class="btn btn-secondary"><a href="{{ url_for('views.blog') }}" id="view">Back to Blog</a></button>
+</div>
+
+
+
+
+
+{% endblock %}

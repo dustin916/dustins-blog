@@ -1,0 +1,23 @@
+{% extends 'dash_base.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
+
+<h1>Sermons:</h1>
+
+
+<ul style="list-style-type: none;">
+    {% for sermon in sermon_list %}
+    <li class="list-group-item" id="sermon">
+        <a href="{{ url_for('auth.dash_sermon', id=sermon.id) }}">
+        {{ sermon.name.replace('_', ' ').replace('.mp3', '') }}</a> <br><br>
+
+        <button type="button" class="close" onClick="deleteSermon({{ sermon.id }})"><span aria-hidden="true">Delete
+        </span></button>
+        <br><br>
+    </li>
+    {% endfor %}
+
+</ul>
+<br>
+
+
+
+{% endblock %}

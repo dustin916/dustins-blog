@@ -1,0 +1,25 @@
+{% extends 'base.html' %}{% block title %}{{title}}{% endblock %}
+
+{% block content %} 
+
+<h1 id="pageHeader">Blog</h1>
+
+
+    {% for blogs in blog_list %}
+<div id="blog" class="container container-sm shadow p-3 mb-5 bg-body rounded">
+        <h2 id="blogTitle">{{ blogs.title }}</h2> <br>
+        <h3>{{ blogs.content|safe }}</h3>
+            <button type="button" value="{{ blogs.content }}" class="btn btn-secondary"><a href=
+                    "{{ url_for('views.individual_blog', id=blogs.id) }}" id="view">
+                <span aria-hidden="true">View</span></a>
+            </button>
+
+    <br><br>
+
+
+</div>
+    {% endfor %}
+
+
+
+{% endblock %}

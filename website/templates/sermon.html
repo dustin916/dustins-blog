@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block title %}{{title}}{% endblock %} {% block content %}
+
+<h1 id="pageHeader">Sermon</h1>
+
+    <div id="singleSermon" class="container container-sm shadow p-3 mb-5 bg-body rounded">
+        {{ sermon.name.replace('_', ' ').replace('.mp3', '') }}: <br><br>
+    <audio controls src="{{ url_for('static', filename='sermon/' + sermon.name) }}"></audio>
+
+
+    </div>
+<br><hr><br>
+
+
+
+
+<ul style="list-style-type: none;" id="sermonList">
+    {% for sermon in sermon_list %}
+    <li class="list-group-item" id="sermon">
+        <a href="{{ url_for('views.sermon', id=sermon.id) }}" id="sermons">
+        {{ sermon.name.replace('_', ' ').replace('.mp3', '') }}</a> <br>
+
+    </li>
+    {% endfor %}
+
+</ul>
+
+
+
+
+{% endblock %}

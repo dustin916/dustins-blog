@@ -1,0 +1,28 @@
+{% extends 'dash_base.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
+
+<h1>Images:</h1>
+
+
+
+<div class="picContainer">
+        {% for image in image_list %}
+    <div id=images class="shadow p-3 mb-5 bg-body rounded">
+            <figure class="figure">
+            <img src="{{ url_for('static', filename='images/' +
+            image.pic)}}" class="figure-img img-fluid rounded" id="image">
+                <figcaption class="figure-caption-color: black" id="caption">{{ image.caption }}</figcaption>
+    </div>
+                <button type="button" class="btn btn-secondary" id="imageDeleteButton" onClick="deleteImages({{ image.id }})">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+        {% endfor %}
+
+</div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'dash_base.html' %} {% block title %} {{title}} {% endblock %} 
+
+
+
+{% block nav_head %} Dashboard Login {% endblock %}
+{% block nav %} {% endblock %}
+{% block content %}
+<h1>Please Login</h1>
+<div class="shadow p-3 mb-5 bg-body rounded" id="loginForm">
+<form method="POST">
+    <h3 align="center">Login</h3>
+    <div class="form-group" align="center">
+        <label for="username">User Name</label>
+        <input type="username" class="form-control" id="username" name="username" placeholder="Enter username" />
+    </div>
+    
+    <div class="form-group" align="center">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" />
+    </div>
+    
+
+    <br>
+    <div align="center">
+        &nbsp;&nbsp;&nbsp;&nbsp; <button type="submit" class="btn btn-primary" align="center">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset">
+    </div>
+
+</form>
+</div>
+
+{% endblock %}

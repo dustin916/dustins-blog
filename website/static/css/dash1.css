@@ -1,0 +1,348 @@
+html {
+    background: linear-gradient(rgb(172, 188, 160), rgb(104, 115, 118));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+    font-family: 'Arial', 'Times New Roman', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    background: linear-gradient(rgb(172, 188, 160), rgb(104, 115, 118));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+    font-family: 'Arial', 'Times New Roman', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #4d880d;
+    margin: 0 auto;
+}
+
+header::after {
+    /*this is a clear fix with .name floating left and nav floating right*/
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.name {
+    float: left;
+    font-weight: bold;
+    font-size: 175%;
+    padding: 10px 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    /*overflow: hidden;*/
+    color: rgb(55, 227, 213)/*find how to change hyperlink color?*/
+}
+
+nav li {
+    float: left;
+    margin-left: 70px;
+    display: block;
+    padding-top: 19px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 10px;
+    position: relative;
+}
+
+nav a {
+    color: rgb(0, 47, 255);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: rgba(0, 14, 162, 0.831)
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: rgb(0, 47, 255);
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+
+/* General Web Layout (not nav bar) */
+
+
+a {
+    text-decoration: none;
+}
+
+#view{
+    color: rgb(255, 255, 255)
+}
+
+#view:hover{
+    color: rgb(255, 255, 255)
+}
+
+#edit{
+    color: rgb(37, 37, 37)
+}
+
+#edit:hover{
+    color: rgb(255, 255, 255)
+}
+
+#blogEdit{
+    color: rgb(255, 255, 255)
+}
+
+#blogEdit:hover{
+    color: rgb(255, 255, 255)
+}
+
+#profpicedit{
+    color: rgb(255, 255, 255)
+}
+
+#profpicedit:hover{
+    color: rgb(255, 255, 255)
+}
+
+#picEdit{
+    color: rgb(255, 255, 255)
+}
+
+#picEdit:hover{
+    color: rgb(255, 255, 255)
+}
+
+h1 {
+    padding-top: 25px;
+    padding-left: 40px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+
+
+/* Uploader */
+
+#aboutMeUploader {
+    border-style: groove;
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#ckReset {
+    color: rgb(255, 255, 255)
+}
+
+#profilePictureLabel {
+    padding-top: 25px;
+    padding-left: 40px;
+}
+
+#profilePictureUploader {
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#blogPost {
+    border-style: groove;
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#imageLabel{
+    padding-top: 25px;
+    padding-left: 40px;
+}
+
+#imageUpload{
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#sermonLabel{
+    padding-top: 25px;
+    padding-left: 40px;
+}
+
+#sermonUpload{
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 40px;
+}
+
+/* dash blog viewer */
+
+/* About me */
+
+#aboutHeader{
+
+}
+
+#aboutSection {
+
+}
+
+#profilePicture {
+    margin-right: 10%;
+    margin-left: 8%;
+    border: 1px solid;
+}
+
+#profPic {
+    height: 100%;
+    width: 100%;
+}
+
+#welcome {
+
+}
+
+#aboutMeWelcome {
+    border-style: groove;
+    margin-top: 0px;
+    margin-left: 100px;
+
+}
+
+#aboutMe {
+    border-style: groove;
+    margin-top: 0px;
+    margin-left: 100px;
+}
+
+#aboutButtons {
+
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 48%;
+
+}
+
+#profpicButtons {
+
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 48%;
+
+}
+
+/* Blog */
+
+#blog {
+    border-style: groove;
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 40px;
+}
+
+
+/* Images */
+
+pic {
+    width: 200px;
+    padding: 20px;
+    float: left;
+}
+
+picBreak {
+    display: list-item;
+    float: inline-end;
+}
+
+.picContainer {
+    margin-left: 2.15%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: flex-start;
+}
+
+#images{
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+
+}
+
+figure.figure {
+    height: 93%;
+    width: 100%;
+
+}
+
+#image{
+    height: 100%;
+    width: 100%;
+    margin: 5px;
+
+}
+
+#caption{
+    text-align: center;
+}
+
+#imageDeleteButton{
+    margin-right: 15px;
+    margin-left: -10px;
+}
+
+/* Sermons */
+
+#singleSermon{
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 40px;
+}
+
+/* login/signup */
+
+#signupForm{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 4%;
+}
+
+#loginForm{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 4%;
+}

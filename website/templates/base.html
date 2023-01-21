@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity=
+            "sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          crossorigin="anonymous" />
+    <link href="{{url_for('static', filename='css/blog1.css')}}" rel="stylesheet" type="text/css" />
+
+
+
+
+    <title>{% block title %} Dustin's Blog {% endblock %}</title>
+</head>
+
+<body>
+
+    <header>
+        <br>
+        <div class="container container-sm" id="navContainer">
+            <div class="name" id="headerName">{% block header %}
+
+                Dustin's Blog{% endblock %}</div>
+            <br>
+            <div id="logo"><i class="fa-solid fa-church fa-5x"></i></div>
+            <nav>
+                <ul class="navbar navbar-sm navList">
+                    <li><a href="{{ url_for('views.about_me') }}">About Me</a></li>
+                    <li><a href="{{ url_for('views.blog') }}">Blog</a></li>
+                    <li><a href="{{ url_for('views.images') }}">Images</a></li>
+                    <li><a href="{{ url_for('views.sermons') }}">Sermons</a></li>
+                    <li><a href="{{ url_for('views.subscribe_contact') }}">Subscribe/Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container container-sm">
+    <br><br> {% block content %}{% endblock %}
+
+    <br>
+    <hr>
+    <br>
+
+    <div id="blogFooter">
+        <div id="logoFooter"><i class="fa-solid fa-church fa-5x"></i></div>
+        <h4>Dustin's Blog</h4>
+        <p>Thank you for visiting my website. If you have any questions or would like me to build you a website, feel
+            free to <a href="{{ url_for('views.subscribe_contact') }}" id="contactLink">contact me</a>. </p>
+    </div>
+</div>
+
+    <script src="https://kit.fontawesome.com/8b6910d4b9.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity=
+            "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity=
+            "sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity=
+            "sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity=
+            "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--My js-->
+    <script type="text/javascript" src="{{url_for('static', filename='js/blog1.js') }}"></script>
+
+</body>
+
+</html>

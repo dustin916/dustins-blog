@@ -1,0 +1,18 @@
+{% extends 'dash_base.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
+
+<h1>Subscribers:</h1>
+<h3>
+    <ol>
+        {% for subscriber in subscriber_list %}
+        <li class="list-group-item">{{ subscriber.first_name + " " + subscriber.last_name + " | " + subscriber.email }}
+            <button type="button" class="close" onClick="deleteSubscribers({{ subscriber.id }})">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+        </li>
+        {% endfor %}
+
+    </ol>
+</h3>
+
+{% endblock %}

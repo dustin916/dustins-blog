@@ -1,0 +1,28 @@
+{% extends 'base.html' %}{% block title %}{{title}}{% endblock %}
+
+{% block content %} 
+
+<h1 id="pageHeader">Images</h1>
+
+
+
+<div class="container container-sm picContainer">
+        {% for image in image_list %}
+    <div id=images class="shadow p-3 mb-5 bg-body rounded">
+        <figure class="figure">
+
+            <a href="{{ url_for('views.individual_image', id=image.id) }}"><img src="{{ url_for('static',
+            filename='images/' + image.pic)}}" class="figure-img img-fluid rounded" id="image"></a>
+
+        </figure>
+    </div>
+        {% endfor %}
+
+</div>
+
+
+
+
+
+
+{% endblock %}

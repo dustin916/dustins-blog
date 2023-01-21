@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block title %}{{title}}{% endblock %} {% block content %}
+
+<div id="thankYou">
+    <h1> Thank you for contacting me. </h1>
+
+    <i class="fa-regular fa-face-smile fa-8x"></i>
+    <br><br>
+    <small>Please Confirm Your Information</small>
+    <br><br> {{ subject }} || {{ first_name }} {{ last_name }} || {{ email }} || <br> Message: {{ message }}
+    <br><br>
+
+
+</div>
+
+
+{% endblock %}

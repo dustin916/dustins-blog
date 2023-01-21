@@ -1,0 +1,31 @@
+{% extends 'base.html' %}{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+<button class="btn btn-secondary" id="imageGallery"><a href="{{ url_for('views.images') }}"
+                                                       id="view">Back to Image Gallery</a></button>
+
+<br><br><br>
+
+    <div id="individualImages" class="container container-sm shadow p-3 mb-5 bg-body rounded">
+        <figure class="figure">
+
+                <img src="{{ url_for('static', filename='images/' +
+                    image.pic)}}" class="figure-img img-fluid rounded" id="individualImage">
+                <figcaption class="figure-caption-color: black" id="caption">{{ image.caption }}</figcaption>
+
+        </figure>
+    </div>
+
+
+
+<br>
+
+
+
+
+
+
+
+
+{% endblock %}

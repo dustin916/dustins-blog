@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block title %}{{title}}{% endblock %} {% block content %}
+
+<h1 id="pageHeader" class="aboutHeader container-sm">About Me</h1>
+
+<div class="container-sm" id="aboutSection">
+    <div class="row">
+        <div class="col-sm-7">
+
+
+    {% for aboutme in aboutme %}
+
+    <div id="aboutMeWelcome" class="shadow p-3 mb-5 bg-body rounded">
+        <h2 class="shadow p-3 mb-5 bg-body rounded" id="welcome">Welcome:</h2>
+            <p>{{ aboutme.welcome }}</p>
+    </div>
+
+            {% endfor %}
+        </div>
+
+               <div class="col-sm-5">
+    {% for pic in profilepic %}
+
+<div id="profilePicture">
+    <img src="{{ url_for('static', filename='images/profile_pic/' + pic.profile_pic )}}" class="img-fluid rounded"
+         id="profPic">
+
+</div>
+    {% endfor %}
+        </div>
+
+
+        <div class="col-sm-7">
+
+         {% for aboutme in aboutme %}
+    <div id="aboutMe" class="shadow p-3 mb-5 bg-body rounded">
+        <h2 class="shadow p-3 mb-5 bg-body rounded" id="aboutMeHeader">About Me: </h2>
+            {{ aboutme.about|safe }}
+    </div>
+
+
+    <br>
+
+
+{% endfor %}
+        </div>
+ </div>
+
+</div>
+
+
+
+
+{% endblock %}

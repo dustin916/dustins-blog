@@ -1,0 +1,31 @@
+{% extends 'dash_base.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
+
+<h1>Sermon:</h1>
+
+    <div id="singleSermon" class="shadow p-3 mb-5 bg-body rounded">
+        {{ sermon.name.replace('_', ' ').replace('.mp3', '') }}: <br><br>
+    <audio controls src="{{ url_for('static', filename='sermon/' + sermon.name) }}"></audio>
+        <br><br><button type="button" class="close" onClick="deleteSermon({{ sermon.id }})">
+                    <span aria-hidden="true">Delete</span></button>
+
+    </div>
+<br><hr>
+
+
+
+
+<ul style="list-style-type: none;">
+    {% for sermon in sermon_list %}
+    <li class="list-group-item" id="sermon">
+        <a href="{{ url_for('auth.dash_sermon', id=sermon.id) }}">
+        {{ sermon.name.replace('_', ' ').replace('.mp3', '') }}</a> <br>
+
+    </li>
+    {% endfor %}
+
+</ul>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'dash_base.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
+
+<h1>Blog Editor:</h1>
+
+<!--form to add blog-->
+
+
+<div id="blog" class="shadow p-3 mb-5 bg-body rounded">
+    <form method="POST">
+
+        {{ edit_form.hidden_tag() }}
+        {{ edit_form.title.label(class="form-label") }}
+        <br>
+        {{ edit_form.title(class="form-control") }}
+        <br><br>
+        {{ edit_form.content.label(class="form-label") }}
+        <br>
+        {{ edit_form.content(class="form-control", rows="10") }}
+        <br>
+        {{ edit_form.submit }}
+    </form>
+    <br>
+    <hr>
+    <br>
+
+
+    {{ ckeditor.load() }}
+    {{ ckeditor.config(name='content') }}
+
+</div>
+
+
+
+
+{% endblock %}

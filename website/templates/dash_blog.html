@@ -1,0 +1,28 @@
+{% extends 'dash_base.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
+
+<h1>Blog:</h1>
+
+
+    {% for blog in blog_list %}
+<div id="blog" class="shadow p-3 mb-5 bg-body rounded">
+        <h2>{{ blog.title }}</h2> <br>
+        <h3>{{ blog.content|safe }}</h3>
+            <button type="button" value="{{ blog.content }}" class="btn btn-secondary"><a href=
+                    "{{ url_for('auth.dash_individual_blog', id=blog.id) }}" id="view">
+                <span aria-hidden="true">View</span> </a>
+            </button>
+            <button type="button" class="btn btn-secondary" onClick="deleteBlog({{ blog.id }})">
+                <span aria-hidden="true">Delete</span>
+            </button>
+    <br><br>
+
+
+</div>
+    {% endfor %}
+
+
+
+
+
+
+{% endblock %}

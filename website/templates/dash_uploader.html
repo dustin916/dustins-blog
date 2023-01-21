@@ -1,0 +1,98 @@
+{% extends 'dash_base.html' %} {% block title %} {{title}} {% endblock %} {% block content %}
+
+<h1>About Me:</h1>
+
+<div id="aboutMeUploader" class="shadow p-3 mb-5 bg-body rounded">
+    <form method="POST">
+
+        {{ about_form.hidden_tag() }}
+        {{ about_form.welcome.label(class="form-label") }}
+        <br>
+        {{ about_form.welcome(class="form-control") }}
+        <br>
+        {{ about_form.about.label(class="form-label") }}
+        <br>
+        {{ about_form.about(class="form-control", rows="10") }}
+        <br>
+        {{ about_form.submit(class="btn btn-secondary") }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-secondary"><a href=
+             "{{ url_for('auth.dash_uploader') }}"> <span aria-hidden="true" id="ckReset">Reset</span></a></button>
+    {{ ckeditor.load() }}
+    {{ ckeditor.config(name='about_me') }}
+    </form>
+</div>
+
+<div id="profilePictureLabel"><p><b><ins>Upload Profile Picture</ins></b></p></div>
+<div id="profilePictureUploader" class="mb-3">
+
+    <form method="POST" enctype="multipart/form-data">
+        {{profile_pic_form.hidden_tag()}}
+        {{ profile_pic_form.profile_pic(class="form-control") }}
+        <br>
+        {{ profile_pic_form.submit }} &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; <input type="reset">
+    </form>
+</div>
+
+<br><hr>
+
+<h1>Blog:</h1>
+
+<!--form to add blog-->
+
+<br><br>
+<div id="blogPost" class="shadow p-3 mb-5 bg-body rounded">
+    <form method="POST">
+
+        {{ blog_form.hidden_tag() }}
+        {{ blog_form.title.label(class="form-label") }}
+        <br>
+        {{ blog_form.title(class="form-control") }}
+        <br>
+        {{ blog_form.content.label(class="form-label") }}
+        <br>
+        {{ blog_form.content(class="form-control", rows="10") }}
+        <br>
+        {{ blog_form.submit(class="btn btn-secondary") }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-secondary"><a href=
+             "{{ url_for('auth.dash_uploader') }}"> <span aria-hidden="true" id="blogEdit">Reset</span></a></button>
+    </form>
+
+    {{ ckeditor.load() }}
+    {{ ckeditor.config(name='content') }}
+
+</div>
+<!-- form to upload file -->
+
+<br>
+<div id="imageLabel"><p><b><ins>Upload Image</ins></b></p></div>
+<div id="imageUpload" class="mb-3">
+    <form method="POST" enctype="multipart/form-data">
+        {{image_form.hidden_tag()}}
+        {{image_form.file(class="form-control")}}
+        <br> {{ image_form.caption(class="form-control", placeholder="Write caption here.") }}
+        <br> {{image_form.submit}} &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; <input type="reset">
+    </form>
+
+</div>
+
+
+<!-- form to upload sermons -->
+
+</form>
+<br>
+<div id="sermonLabel"><p><b><ins>Upload Sermon</ins></b></p></div>
+<div id="sermonUpload" class="mb-3">
+    <form method="POST" enctype="multipart/form-data">
+        {{sermon_form.hidden_tag()}} {{sermon_form.audio_file(class="form-control")}} <br> {{sermon_form.submit}}
+        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp; <input type="reset">
+    </form>
+</div>
+
+
+
+<script src="https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
+
+{% endblock %}
+
+
