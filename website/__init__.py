@@ -24,6 +24,8 @@ def create_app():
     app.config['UPLOAD_PROFILE_PIC_FOLDER'] = UPLOAD_PROFILE_PIC_FOLDER
     app.config['UPLOAD_AUDIO_FOLDER'] = UPLOAD_AUDIO_FOLDER
     app.config['CKEDITOR_PKG_TYPE'] = 'full'  # basic, standard or full
+    app.config['RECAPTCHA_PUBLIC_KEY'] = '6Ldtuz0mAAAAABhn9RElj51ar-X3Y99DQCCexqw_'
+    app.config['RECAPTCHA_PRIVATE_KEY'] = '6Ldtuz0mAAAAAHxj7bFjkgOZuarmNyj5Z077GbAY'
 
     ckeditor.init_app(app)
 

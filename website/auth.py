@@ -141,11 +141,12 @@ def dash_uploader():
             link = url_for('views.unsubscribe', token=token, _external=True, _scheme="click here.")
             subject = "Website Update"
             mail_message = """
-        Dear {}, there has been an update to my website. Please check out my new {}.
+        Dear {}, there has been an update to my website. Please check out my new {} at www.dustinsblog.org .
 
 
 
 
+        Unsubscribe:
         If you wish to be removed from the subscription please click the link below.
         {}
                 """.format(name, "About Me page", link)
@@ -177,11 +178,11 @@ def dash_uploader():
             link = url_for('views.unsubscribe', token=token, _external=True, _scheme="click here.")
             subject = "Website Update"
             mail_message = """
-        Dear {}, there has been an update to my website. Please check out my new {}.
+        Dear {}, there has been an update to my website. Please check out my new {} at www.dustinsblog.org.
 
 
 
-
+        Unsubscribe:
         If you wish to be removed from the subscription please click the link below.
         {}
                 """.format(name, "Profile Picture", link)
@@ -212,11 +213,11 @@ def dash_uploader():
             link = url_for('views.unsubscribe', token=token, _external=True, _scheme="click here.")            
             subject = "Website Update"
             mail_message = """
-    Dear {}, there has been an update to my website. Please check out my new {}.
+    Dear {}, there has been an update to my website. Please check out my new {} at www.dustinsblog.org/blog.
 
 
 
-
+    Unsubscribe:
     If you wish to be removed from the subscription please click the link below.
     {}
             """.format(name, "Blog", link)
@@ -247,11 +248,11 @@ def dash_uploader():
             link = url_for('views.unsubscribe', token=token, _external=True, _scheme="click here.")            
             subject = "Website Update"
             mail_message = """
-    Dear {}, there has been an update to my website. Please check out my new {}.
+    Dear {}, there has been an update to my website. Please check out my new {}  at www.dustinsblog.org/images.
 
 
 
-
+    Unsubscribe:
     If you wish to be removed from the subscription please click the link below.
     {}
             """.format(name, "Image", link)
@@ -283,11 +284,11 @@ def dash_uploader():
             link = url_for('views.unsubscribe', token=token, _external=True, _scheme="click here.")            
             subject = "Website Update"
             mail_message = """
-    Dear {}, there has been an update to my website. Please check out my new {}.
+    Dear {}, there has been an update to my website. Please check out my new {} at www.dustinsblog.org/sermons.
 
 
 
-
+    Unsubscribe:
     If you wish to be removed from the subscription please click the link below.
     {}
             """.format(name, "Sermon", link)
