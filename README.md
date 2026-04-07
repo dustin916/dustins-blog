@@ -1,6 +1,16 @@
 # Dustins Blog
- Dustins Blog
 
+A Django-based blog application built as my first full-stack project.
 
-First Website I built using Django, Python, HTML, CSS and JavaScript. 
-Might not have been the best, but I feel it was a good start.
+## Features
+- User authentication
+- Create, edit, and delete posts
+- Basic styling with HTML/CSS
+
+## What I Learned
+- Django fundamentals (models, views, templates)
+- Database integration
+- Deployment process
+
+## Status
+No longer actively maintained, but serves as a foundational learning project.
