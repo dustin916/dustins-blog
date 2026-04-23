@@ -1,6 +1,6 @@
 # Dustins Blog
 
-A Django-based blog application built as my first full-stack project.
+A Flask-based blog application built as my first full-stack project.
 
 ## Features
 - User authentication
@@ -8,7 +8,7 @@ A Django-based blog application built as my first full-stack project.
 - Basic styling with HTML/CSS
 
 ## What I Learned
-- Django fundamentals (models, views, templates)
+- Flask fundamentals (models, views, templates)
 - Database integration
 - Deployment process
 
