@@ -21,6 +21,7 @@ from . import db
 auth = Blueprint('auth', __name__)
 
 s = URLSafeSerializer(os.environ['DustinsBlogUnsubscribeSecretKey'])
+
 dustin_email = "dustinsblog22@gmail.com"
 dustin_pw = os.environ['WEB_BLG_APP_PW']
 
