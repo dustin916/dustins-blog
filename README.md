@@ -14,3 +14,9 @@ A Flask-based blog application built as my first full-stack project.
 
 ## Status
 No longer actively maintained, but serves as a foundational learning project.
+
+## Demo Video
+
+
+https://github.com/user-attachments/assets/fbd0d867-a7af-456b-bdb3-49def32e6e1e
+
